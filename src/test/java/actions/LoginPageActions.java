@@ -2,6 +2,9 @@ package actions;
 
 import pages.LoginPage;
 
+import static constants.Constants.LOGIN_ERROR_MESSAGE;
+import static org.assertj.core.api.Assertions.assertThat;
+
 /**
  * This class provides actions that can be performed on the login page.
  * Author: Rob Thomson
@@ -82,5 +85,13 @@ public class LoginPageActions {
         } catch (Exception e) {
             System.err.println("Error clicking Login button: " + e.getMessage());
         }
+    }
+
+    public void checkLoginErrorIsDisplayed(){
+        // Assert that the innerText matches the expected string with a custom message
+        assertThat(LOGIN_ERROR_MESSAGE)
+                .as("Check that the innerText of the element matches the expected text")
+                .isEqualTo(loginPage.loginErrorMessage().getAttribute("innerText"));
+
     }
 }

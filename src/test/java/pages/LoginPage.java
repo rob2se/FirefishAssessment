@@ -57,4 +57,8 @@ public class LoginPage {
     public WebElement loginButton() {
         return element.getElement(Locators.Xpath, "//input[@type='submit']");
     }
+
+    public WebElement loginErrorMessage(){
+        return element.getElement(Locators.Xpath, "//div[@role='alert']");
+    }
 }

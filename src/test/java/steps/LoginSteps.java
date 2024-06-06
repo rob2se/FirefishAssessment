@@ -82,4 +82,9 @@ public class LoginSteps {
                 .as("Check if the current URL contains 'Dashboard'")
                 .contains("Dashboard");
     }
+
+    @Then("An error is displayed")
+    public void anErrorIsDisplayed() {
+
+    }
 }

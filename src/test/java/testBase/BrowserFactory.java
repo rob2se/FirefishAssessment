@@ -68,7 +68,7 @@ public class BrowserFactory {
      */
     private void configureChromeOptions(ChromeOptions options) {
         options.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation"));
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("credentials_enable_service", false);
         prefs.put("profile.password_manager_enabled", false);
